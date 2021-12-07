@@ -1,0 +1,14 @@
+button {
+  width: 70px;
+  outline: none;
+  border: none;
+  background-color: burlywood;
+  border-radius: 5px;
+  height: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: chocolate;
+}
