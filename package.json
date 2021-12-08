@@ -2,6 +2,7 @@
   "name": "react-hw-02-feedback",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ukrhero.github.io/react-hw-02-feedback",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^11.2.7",
@@ -16,7 +17,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

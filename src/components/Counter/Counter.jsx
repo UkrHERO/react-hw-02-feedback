@@ -13,11 +13,6 @@ class Counter extends Component {
     bad: 0,
   };
 
-  sum = {
-    otal: 0,
-    goodPercent: 0,
-  };
-
   handleIncrement = e => {
     const name = e.target.dataset.name;
     this.setState(prevState => ({
@@ -25,24 +20,10 @@ class Counter extends Component {
     }));
   };
 
-  countTotalFeedback = () => {
-    const { good, neutral, bad } = this.state;
-    this.sum.total = good + neutral + bad;
-  };
-
-  countPositiveFeedbackPercentage = () => {
-    const { good } = this.state;
-    if (good > 0) {
-      this.sum.goodPercent = Math.round((good / this.sum.total) * 100);
-    }
-  };
-
   render() {
-    this.countTotalFeedback();
-    this.countPositiveFeedbackPercentage();
     const { good, neutral, bad } = this.state;
-    const { total, goodPercent } = this.sum;
-
+    const total = good + neutral + bad;
+    const goodPercent = Math.round((good / total) * 100);
     return (
       <div className="Counter">
         <Section title="Please leave feedback" />
